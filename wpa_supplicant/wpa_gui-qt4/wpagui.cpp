@@ -122,6 +122,7 @@ WpaGui::WpaGui(QApplication *_app, QWidget *parent, const char *,
 	connect(wpsApPinEdit, SIGNAL(textChanged(const QString &)), this,
 		SLOT(wpsApPinChanged(const QString &)));
 	connect(wpsApPinButton, SIGNAL(clicked()), this, SLOT(wpsApPin()));
+    connect(closeButton, SIGNAL(clicked()), qApp, SLOT(quit()));
 
 	eh = NULL;
 	scanres = NULL;
